@@ -12,7 +12,7 @@ After=syslog.target network.target
 WantedBy=multi-user.target
 
 [Service]
-Environment=PORT={{app_port}}
+Environment=PORT={{ app_port }}
 ExecStart=java -jar {{ app_dir }}/{{ app_file }} --server.port={{PORT}}
 User=userJavaApp
 Restart=always

@@ -30,10 +30,9 @@ http {
     server {
         {#
             TODO: Nginx server config using proxy_pass and {{ app_port }}
-            listen: {{ app_port }}
-            server_name  localhost;
+            listen: 80
             location /examples {
-                proxy_pass http://localhost:{{ app_port }}/examples;
+                proxy_pass http://localhost:{{ app_port }}/;
                 }
 
         #}
